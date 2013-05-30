@@ -1,7 +1,4 @@
 class Article < ActiveRecord::Base
-
-  attr_accessible :body, :title
-
-  # attr_accessible :title, :body
-
+  attr_accessible :title, :body
+  has_many :comments
 end
