@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-<<<<<<< HEAD
+
   
   def index 
     @articles = Article.all
@@ -40,15 +40,5 @@ class ArticlesController < ApplicationController
 
      redirect_to article_path(@article)
   end
-=======
-
-	def index 
-		@articles = Article.all
-	end
-
-	def show
-		@article = Article.find(params[:id])
-	end
->>>>>>> 54e7b5d5d692db0a462a0a439af1234d235083d5
 
 end
