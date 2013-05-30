@@ -1,4 +1,11 @@
 <h1><%= @article.title %></h1>
+<p>
+  Tags:
+  <% @article.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %>
+  <% end %>
+</p>
+
 <p><%= @article.body %></p><br/><br/>
 
 <%= link_to "delete", article_path(@article), :confirm => "are you sure", method: :delete %><br /><br />
@@ -16,5 +23,14 @@
 <p>
 <%= link_to "<< Back to Articles List", articles_path %>
 </p>
+
+<h1>Articles Tagged with <%= @tag.name %></h1>
+
+<ul>
+  <% @tag.articles.each do |article| %>
+    <li><%= link_to article.title, article_path(article) %></li>
+  <% end %>
+</ul>
+
 
 
