@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>All Articles</h1>
 
 <ul id="articles">
@@ -9,3 +10,19 @@
 </ul>
 
 <%= link_to "Create a New Article", new_article_path, class: "new_article" %>
+=======
+<h1> All Articles</h1>
+
+<ul id = "articles">
+  <% @articles.each do |article| %>
+	<li>
+		<%= link_to article.title, article_path(article) %>
+	</li>
+  <%end%>
+
+</ul>
+
+<p>
+	<%= link_to "Create a New Article", new_article_path, class: "new_article"%>
+</p>
+>>>>>>> 54e7b5d5d692db0a462a0a439af1234d235083d5

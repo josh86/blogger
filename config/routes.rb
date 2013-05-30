@@ -1,8 +1,12 @@
 Blogger::Application.routes.draw do
+<<<<<<< HEAD
   
   root to: 'articles#index'
   resources :articles
   
+=======
+  resources :articles
+>>>>>>> 54e7b5d5d692db0a462a0a439af1234d235083d5
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
